@@ -35,7 +35,7 @@ const Header = ({ setSearch }) => {
         {/* logo */}
         <div className="logo">
           <Link to={"/"}>
-            <h2 className="text-2xl md:text-4xl text-[#535878] ml-2 font-semibold uppercase">
+            <h2 className="text-2xl md:text-4xl text-[#535878] ml-2 uppercase">
               Ender Ticaret
             </h2>
           </Link>

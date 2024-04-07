@@ -13,7 +13,7 @@ const ProductItem = ({ item }) => {
   return (
     <div
       key={item._id}
-      className="product-item border hover:shadow-lg cursor-pointer transition-all select-none rounded-md "
+      className="product-item border hover:shadow-lg cursor-pointer transition-all select-none rounded-md flex flex-col"
       onClick={handleClick}
     >
       <div className="product-img">
@@ -22,23 +22,28 @@ const ProductItem = ({ item }) => {
             <img
               src={item.img}
               alt={`${item.title} image`}
-              className="h-28 object-cover w-full border-b rounded-md"
+              className="h-28 object-cover w-full border-b rounded-t-md"
             />
           </>
         ) : (
           <>
             <img
-              src="https://grafgearboxes.com/productos/images/df.jpg"
+              src="https://t4.ftcdn.net/jpg/04/99/93/31/360_F_499933117_ZAUBfv3P1HEOsZDrnkbNCt4jc3AodArl.jpg"
               alt="image"
-              className="h-28 object-cover w-full border-b rounded-md"
+              className="h-28 object-cover w-full border-b rounded-t-md"
             />
           </>
         )}
       </div>
 
-      <div className="product-info flex flex-col p-3 ">
-        <span className="font-bold text-lg"> {item.title} </span>
-        <span>{item.price.toFixed(2)}₺</span>
+      <div className="flex-grow flex flex-col justify-between p-3">
+        <div>
+          <h1 className="text-lg">{item.title} </h1>
+        </div>
+
+        <div className="mt-auto">
+          <span className="font-bold">{item.price.toFixed(2)}₺</span>
+        </div>
       </div>
     </div>
   );

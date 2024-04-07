@@ -9,19 +9,18 @@ import {
   increase,
   reset,
 } from "../../../redux/cartSlice";
-import { Button, Popconfirm, message } from "antd";
+import { message } from "antd";
 import { useNavigate } from "react-router-dom";
 
 const CartTotals = () => {
   const cart = useSelector((state) => state.cart);
-  // console.log(cartItems);
 
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
   return (
     <div className="cart h-full max-h-[calc(100vh_-_80px)] flex flex-col ">
-      <h2 className="bg-blue-600 text-center py-2 text-white font-semibold tracking-wide text-lg">
+      <h2 className="bg-[#767e78] text-center py-3 text-white font-semibold tracking-wide text-lg">
         Sepetteki Ürünler
       </h2>
 
@@ -132,21 +131,17 @@ const CartTotals = () => {
         </div>
 
         <div className="py-2 px-2 flex flex-col items-center justify-center ">
-          <Button
+          <button
             onClick={() => navigate("/cart")}
             disabled={cart.cartItems.length === 0}
-            type="primary"
-            className="w-full py-2 px-1 text-white rounded-md font-bold flex items-center justify-center gap-x-1 duration-300 border-none"
+            className="w-full py-2.5 px-1 text-white rounded-md font-semibold flex items-center justify-center gap-x-3 duration-300 border-none bg-blue-500 hover:bg-blue-700 cursor-pointer"
           >
             <IoReceiptOutline size={20} />
             <span>Sipariş Oluştur</span>
-          </Button>
+          </button>
 
-          <Button
+          <button
             disabled={cart.cartItems.length === 0}
-            type="primary"
-            danger
-            className="w-full py-2 px-1 text-white rounded-md font-bold mt-2 flex items-center justify-center gap-x-1 duration-300 border-none"
             onClick={() => {
               if (
                 window.confirm(
@@ -159,9 +154,10 @@ const CartTotals = () => {
                 message.error("Ürün silme işlemi başarısız!");
               }
             }}
+            className="w-full py-2.5 px-1 text-white rounded-md font-semibold mt-2 flex items-center justify-center gap-x-3 duration-300 border-none bg-red-500 hover:bg-red-700 cursor-pointer"
           >
             <GoTrash size={20} /> <span>Hepsini Temizle</span>
-          </Button>
+          </button>
         </div>
       </div>
     </div>

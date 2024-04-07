@@ -7,7 +7,7 @@ const ProductsPage = () => {
     <>
       <Header />
       <div className="px-6">
-        <h1 className="text-4xl font-bold text-center mb-4">Ürünlerim</h1>
+        <h1 className="text-4xl text-center mb-4">Ürünlerim</h1>
 
         <EditProductPageComp />
       </div>

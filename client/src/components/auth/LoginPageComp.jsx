@@ -101,12 +101,12 @@ const LoginPageComp = () => {
               </div>
             </Form.Item>
           </Form>
-          <div className="flex justify-center absolute left-0 bottom-10 w-full">
+          {/* <div className="flex justify-center absolute left-0 bottom-10 w-full">
             Henüz bir hesabınız yok mu?&nbsp;
             <Link to="/register" className="text-blue-600 underline">
               Şimdi Kayıt Ol
             </Link>
-          </div>
+          </div> */}
         </div>
 
         <div className="xl:w-4/6 lg:flex hidden bg-[#6d62ff]">
