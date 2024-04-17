@@ -53,25 +53,25 @@ const EditProductPageComp = () => {
     getProducts();
   }, []);
 
-  // useEffect(() => {
-  //   const getCategories = async () => {
-  //     try {
-  //       const res = await fetch(
-  //         `${process.env.REACT_APP_SERVER_URL}/api/categories`
-  //       );
-  //       const data = await res.json();
-  //       data &&
-  //         setCategories(
-  //           data.map((item) => {
-  //             return { ...item, value: item.title };
-  //           })
-  //         );
-  //     } catch (error) {
-  //       console.log(error);
-  //     }
-  //   };
-  //   getCategories();
-  // }, []);
+  useEffect(() => {
+    const getCategories = async () => {
+      try {
+        const res = await fetch(
+          `${process.env.REACT_APP_SERVER_URL}/api/categories`
+        );
+        const data = await res.json();
+        data &&
+          setCategories(
+            data.map((item) => {
+              return { ...item, value: item.title };
+            })
+          );
+      } catch (error) {
+        console.log(error);
+      }
+    };
+    getCategories();
+  }, []);
 
   const handleCancel = () => {
     setIsEditModalOpen(false);
@@ -266,7 +266,7 @@ const EditProductPageComp = () => {
       title: "Ürün Fiyatı",
       dataIndex: "price",
       width: "8%",
-      render: (text) => <b className="text-red-500" > {text.toFixed(2)}₺ </b>,
+      render: (text) => <b className="text-red-500"> {text.toFixed(2)}₺ </b>,
     },
 
     {
