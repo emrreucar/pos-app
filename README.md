@@ -1,2 +1,3 @@
-# Ender Ticaret Pos Application
-![image](https://github.com/emrreucar/pos-app/assets/111085998/5eb84222-1314-4e6a-9735-f216354feb16)
+# Pos Application
+
+![pos-app](https://github.com/emrreucar/pos-app/assets/111085998/bf47c594-a683-411c-bc3e-bd34fdf7293d)
